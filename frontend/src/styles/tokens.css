@@ -1,0 +1,62 @@
+/* Design tokens: every colour, size and shadow used in the app is defined here once.
+   Components only use var(--name), so changing a token restyles the whole site. */
+:root {
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'Public Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Colour */
+  --ink: #0c2f2e;            /* main text: deep teal-navy */
+  --ink-soft: #3f5957;       /* secondary text */
+  --ink-faint: #6b807e;      /* tertiary text (still AA on paper) */
+  --paper: #faf9f5;          /* page background: warm neutral */
+  --surface: #ffffff;        /* cards */
+  --surface-alt: #f2f0e9;    /* subtle panels */
+  --line: #e3dfd3;
+  --line-strong: #cfc9b8;
+  --accent: #0b7a5a;         /* emerald */
+  --accent-strong: #095f46;
+  --accent-tint: #e3f3ec;
+  --on-accent: #ffffff;
+  --warn: #8a5a00;
+  --warn-tint: #fdf1d6;
+  --danger: #b0261b;
+  --danger-tint: #fde8e5;
+  --info: #1f5f8b;
+  --info-tint: #e3eff8;
+  --hero-dark: #0d3b3a;
+
+  /* Spacing scale */
+  --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem;
+  --s-5: 1.5rem; --s-6: 2rem; --s-7: 3rem; --s-8: 4.5rem; --s-9: 6.5rem;
+
+  /* Shape + depth */
+  --r-sm: 8px; --r-md: 12px; --r-lg: 20px; --r-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(12, 47, 46, 0.06);
+  --shadow-md: 0 8px 24px -12px rgba(12, 47, 46, 0.18);
+
+  /* Type scale */
+  --fs-sm: 0.875rem; --fs-base: 1rem; --fs-md: 1.125rem;
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+  --fs-2xl: clamp(2.1rem, 1.5rem + 2.6vw, 3.6rem);
+
+  --container: 1120px;
+  --nav-h: 64px;
+  --tabbar-h: 62px;
+}
+
+/* Dark theme: toggled from Settings by setting data-theme="dark" on <html>. */
+:root[data-theme='dark'] {
+  --ink: #e7f1ef; --ink-soft: #b4c8c5; --ink-faint: #8fa6a3;
+  --paper: #0a1f1e; --surface: #102a29; --surface-alt: #143332;
+  --line: #214341; --line-strong: #2e5855;
+  --accent: #4fd1a1; --accent-strong: #7fe3bd; --accent-tint: #123f35; --on-accent: #062b21;
+  --warn: #f2c14e; --warn-tint: #3a2f0e;
+  --danger: #ff9b90; --danger-tint: #3d1814;
+  --info: #8cc4ec; --info-tint: #12344b;
+  --hero-dark: #0a2b2a;
+  --shadow-md: 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Settings: larger text option scales every rem value. */
+:root[data-text='large'] { font-size: 112.5%; }

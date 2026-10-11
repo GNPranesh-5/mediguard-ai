@@ -1,0 +1,17 @@
+import { useState, useEffect } from 'react';
+
+// Like useState, but the value is also saved in localStorage so it survives page reloads.
+export function useLocalStorage(key, initialValue) {
+  const [value, setValue] = useState(() => {
+    try {
+      const stored = localStorage.getItem(key);
+      return stored !== null ? JSON.parse(stored) : initialValue;
+    } catch {
+      return initialValue;
+    }
+  });
+  useEffect(() => {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* ignore quota errors */ }
+  }, [key, value]);
+  return [value, setValue];
+}

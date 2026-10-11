@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-ocr/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Uploaded private images
+uploads/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+# Python testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Local logs
+*.log
+
+# Local uploads and generated files
+uploads/*
+!uploads/.gitkeep
