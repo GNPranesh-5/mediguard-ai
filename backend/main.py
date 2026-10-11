@@ -30,6 +30,8 @@ app.add_middleware(
         "http://127.0.0.1:5174",
         "http://localhost:5175",
         "http://127.0.0.1:5175",
+        "https://mediguard-ai-kappa.vercel.app",
+        "https://mediguard-92i0mf3po-gn-pranesh-s-projects1.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
